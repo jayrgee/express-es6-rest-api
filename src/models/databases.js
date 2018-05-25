@@ -1,6 +1,6 @@
 import { Request } from "mssql";
 
-const databasesModel = {
+const model = {
   getDatabaseById: async id => {
     try {
       const request = new Request();
@@ -28,4 +28,4 @@ const databasesModel = {
   }
 };
 
-export default databasesModel;
+export default model;

@@ -20,6 +20,6 @@ IF DB_NAME() = 'AdventureWorks2017'
 BEGIN
 	DROP USER IF EXISTS [njsuser];
 	CREATE USER [njsuser] FOR LOGIN [njsuser]
-	ALTER ROLE [db_datareader] ADD MEMBER [njsuser]
+  ALTER ROLE [db_owner] ADD MEMBER [njsuser]
 END;
 GO
