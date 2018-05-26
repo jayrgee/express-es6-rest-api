@@ -5,6 +5,7 @@ import products from "../models/products";
 const router = new Router();
 
 router.get("/", async (req, res, next) => {
+  console.log(req.query);
   try {
     const result = await products.getProducts();
     if (result.err) {

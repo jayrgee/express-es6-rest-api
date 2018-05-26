@@ -30,6 +30,15 @@ INNER JOIN [Production].[ProductModel] pm
 INNER JOIN pg
 	ON p.ProductID = pg.ProductID
 ORDER BY p.ProductID;
+
+SELECT
+	[pageNumber]=@PageNumber
+	, [pageSize]=@PageSize
+	, [totalRows]=count(*)
+FROM [Production].[Product] p 
+INNER JOIN [Production].[ProductModel] pm 
+ON p.[ProductModelID] = pm.[ProductModelID];
+
 END
 GO
 

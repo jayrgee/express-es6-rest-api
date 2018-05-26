@@ -1,14 +1,14 @@
 import sql, { Request } from "mssql";
 
 const model = {
-  getProducts: async (page = 1, limit = 10) => {
+  getProducts: async (pageNumber = 1, pageSize = 10) => {
     try {
       const request = new Request();
-      request.input("PageNumber", sql.Int, page);
-      request.input("PageSize", sql.Int, limit);
+      request.input("pageNumber", sql.Int, pageNumber);
+      request.input("pageSize", sql.Int, pageSize);
 
       const dataset = await request.execute("GetProductsByPage");
-      return dataset.recordset;
+      return dataset.recordsets;
     } catch (err) {
       console.log(err);
       return { err };
