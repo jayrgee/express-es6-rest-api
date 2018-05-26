@@ -34,6 +34,7 @@
     "cors": "^2.7.1",
     "dotenv": "^5.0.1",
     "express": "^4.13.3",
+    "express-paginate": "^1.0.0",
     "morgan": "^1.8.0",
     "mssql": "^4.1.0",
     "resource-router-middleware": "^0.6.0"

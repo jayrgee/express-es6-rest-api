@@ -5,9 +5,10 @@ import products from "../models/products";
 const router = new Router();
 
 router.get("/", async (req, res, next) => {
-  console.log(req.query);
+  //console.log(req.query);
+  const { page, limit } = req.query;
   try {
-    const result = await products.getProducts();
+    const result = await products.getProducts(page, limit);
     if (result.err) {
       res.sendStatus(500).send(result.err);
     }
