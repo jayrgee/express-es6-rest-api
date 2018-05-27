@@ -1,0 +1,13 @@
+ul.Navigation {
+    display: inline;
+    list-style: none;
+    padding: 0;
+}
+ul.Navigation li {
+  display: inline;
+  padding: 0 50px;
+}
+ul.Navigation li a {
+  color: #000;
+  text-decoration: none;
+}

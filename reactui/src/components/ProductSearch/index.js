@@ -31,6 +31,10 @@ export default class ProductSearch extends React.Component {
   }
 
   render() {
-    return <div>product search</div>;
+    return (
+      <React.Fragment>
+        <h1>product search</h1>
+      </React.Fragment>
+    );
   }
 }
